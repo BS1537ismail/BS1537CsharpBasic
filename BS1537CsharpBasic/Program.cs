@@ -54,7 +54,16 @@ namespace BS1537CsharpBasic
             int monthNumber = (int)Months.March;
             Console.WriteLine(monthNumber);
 
+            Dictionary<int,int> dictionary = new Dictionary<int,int>();
 
+            dictionary.Add(1, 2);
+            dictionary.Add(2, 3);
+            dictionary.Add(3, 4);
+            Console.WriteLine("dictionary");
+            foreach(var items in dictionary.Values)
+            {
+                Console.WriteLine(items);
+            }
         }
     }
 }

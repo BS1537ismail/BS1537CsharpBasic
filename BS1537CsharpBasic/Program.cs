@@ -70,6 +70,18 @@ namespace BS1537CsharpBasic
             delegateForRectangle rectangleDelegate = new delegateForRectangle(obj.getArea);
             rectangleDelegate += obj.getPerimeter;
             rectangleDelegate.Invoke(2.5, 2.5);
+            // Generics
+
+            Generics<int> student = new Generics<int>();
+            student.Name = "Ismail";
+            student.Success = 1;
+            Generics<bool> student1 = new Generics<bool>();
+            student1.Name = "Hosen";
+            student1.Success = true;
+            Console.WriteLine("This is generics ");
+            Console.WriteLine(student.Name + " " + student.Success);
+            Console.WriteLine(student1.Name + " " + student1.Success);
         }
+
     }
 }

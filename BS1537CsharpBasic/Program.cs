@@ -5,6 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace BS1537CsharpBasic
 {
+    public delegate void delegateForRectangle(double x, double y);
     internal class Program
     {
         //enum
@@ -64,6 +65,11 @@ namespace BS1537CsharpBasic
             {
                 Console.WriteLine(items);
             }
+            //delegate
+            Delegates obj = new Delegates();
+            delegateForRectangle rectangleDelegate = new delegateForRectangle(obj.getArea);
+            rectangleDelegate += obj.getPerimeter;
+            rectangleDelegate.Invoke(2.5, 2.5);
         }
     }
 }
